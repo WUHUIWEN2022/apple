@@ -1,3 +1,3 @@
 
-import steamlit
-steamlit.title("hahahah")
+import streamlit
+streamlit.title("hahahah")
