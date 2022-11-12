@@ -2,6 +2,6 @@
 import streamlit
 streamlit.title("hahahah")
 
-strramlit.header("no no ")
+streamlit.header("no no ")
 
-Streamlit.text( "yayaya")
+streamlit.text( "yayaya")
