@@ -30,15 +30,14 @@ try:
     strealit.error( "please select a fruit ..")
  else:
    fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+ fruit_choice)
-   streamlit.text(fruityvice_response.json())
-   # take the json to normalize
+   fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
+   streamlit.dataframe(fruityvice_normalized)
+
    
 except URLError as e:
    streamlit.error()
    
-fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
-# to a table
-streamlit.dataframe(fruityvice_normalized)
+ 
 
 #--- stop
 Stream.stop()
